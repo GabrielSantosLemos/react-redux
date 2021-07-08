@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as CourseActions from '../../store/actions/course';
 
+const styleSidebar = {
+    flex: "1",
+    alignSelf: "flex-right"
+}
+
 const Sidebar = ({ modules, toggleLesson }) => (
-    <aside>
+    <aside style={styleSidebar}>
     {modules.map(module => (
         <div key={module.id}>
             <strong>{module.title}</strong>
